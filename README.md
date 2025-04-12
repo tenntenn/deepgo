@@ -1,9 +1,9 @@
-# goproposal[![PkgGoDev](https://pkg.go.dev/badge/github.com/tenntenn/goproposal)](https://pkg.go.dev/github.com/tenntenn/goproposal)
+# deepgo[![PkgGoDev](https://pkg.go.dev/badge/github.com/tenntenn/deepgo)](https://pkg.go.dev/github.com/tenntenn/deepgo)
 
 > [!WARNING]
-> **goproposal is currently in experimental**. Breaking changes may occur.
+> **deepgo is currently in experimental**. Breaking changes may occur.
 
-`goproposal` provides tools for Go's proposals and MCP server.
+`deepgo` provides tools deep dive into Go world. 
 
 ## License
 
