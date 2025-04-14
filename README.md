@@ -32,11 +32,6 @@
   **Parameters**  
   - *(none)*
 
-- **`style/modernize`**  
-  Retrieves the source code of the modernize analyzer in gopls internal. All Go users must follow its rules.  
-  **Parameters**  
-  - *(none)*
-
 ### Installation
 
 Install `deepgomcp` with the following command:
