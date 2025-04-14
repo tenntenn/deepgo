@@ -5,6 +5,7 @@ go 1.24.2
 require (
 	github.com/google/go-github v17.0.0+incompatible
 	github.com/mark3labs/mcp-go v0.19.0
+	github.com/tenntenn/goversion v0.1.3
 )
 
 require (
