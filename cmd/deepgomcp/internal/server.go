@@ -16,6 +16,7 @@ import (
 	"github.com/tenntenn/deepgo"
 	"github.com/tenntenn/deepgo/cmd/deepgomcp/internal/document"
 	"github.com/tenntenn/deepgo/cmd/deepgomcp/internal/proposal"
+	"github.com/tenntenn/deepgo/cmd/deepgomcp/internal/style"
 )
 
 type MCPServer struct {
@@ -84,6 +85,7 @@ func (s *MCPServer) initTools() {
 		proposal.NewReviewMeetingMinutesTool(),
 		document.NewReleaseNoteTool(),
 		document.NewLatestGoVersionTool(),
+		style.NewModernizeTool(),
 	)
 }
 
