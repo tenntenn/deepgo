@@ -86,6 +86,7 @@ func (s *MCPServer) initTools() {
 		document.NewReleaseNoteTool(),
 		document.NewLatestGoVersionTool(),
 		style.NewModernizeTool(),
+		style.NewGoStyleTool(),
 	)
 }
 
