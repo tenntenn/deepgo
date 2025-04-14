@@ -10,6 +10,7 @@ import (
 	"github.com/tenntenn/goversion"
 )
 
+// ReleaseNote represents a release note.
 type ReleaseNote struct {
 	Version string `json:"version"`
 	Body    string `json:"body"`
