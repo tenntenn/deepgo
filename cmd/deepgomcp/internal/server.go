@@ -58,15 +58,6 @@ func newLogger(ctx context.Context) (*slog.Logger, error) {
 		return nil, fmt.Errorf("failed to get GOPATH: %w", err)
 	}
 
-	if gopath == "" {
-		home, err := os.UserHomeDir()
-		if err != nil {
-			return nil, fmt.Errorf("failed to get home directory: %w", err)
-		}
-
-		gopath = filepath.Join(home, "go")
-	}
-
 	filename := filepath.Join(gopath, "deepgo", "mcpserver.log")
 	if err := os.MkdirAll(filepath.Dir(filename), 0o644); err != nil {
 		return nil, fmt.Errorf("failed to create directory %q: %w", filepath.Dir(filename), err)
@@ -82,15 +73,15 @@ func newLogger(ctx context.Context) (*slog.Logger, error) {
 }
 
 func getGOPATH(ctx context.Context) (string, error) {
-	var stdin bytes.Buffer
+	var stdout bytes.Buffer
 	cmd := exec.CommandContext(ctx, "go", "env", "GOPATH")
-	cmd.Stdin = &stdin
+	cmd.Stdout = &stdout
 
 	if err := cmd.Run(); err != nil {
 		return "", fmt.Errorf("failed to run go env GOPATH: %w", err)
 	}
 
-	return stdin.String(), nil
+	return stdout.String(), nil
 }
 
 func (s *MCPServer) initTools() {
