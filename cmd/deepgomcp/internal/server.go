@@ -17,6 +17,7 @@ import (
 	"github.com/tenntenn/deepgo/cmd/deepgomcp/internal/document"
 	"github.com/tenntenn/deepgo/cmd/deepgomcp/internal/proposal"
 	"github.com/tenntenn/deepgo/cmd/deepgomcp/internal/style"
+	"github.com/tenntenn/deepgo/cmd/deepgomcp/internal/util"
 )
 
 type MCPServer struct {
@@ -31,7 +32,10 @@ func New(ctx context.Context) (*MCPServer, error) {
 		return nil, fmt.Errorf("failed to create logger: %w", err)
 	}
 
-	mcpServer := server.NewMCPServer("DeepGo MCP", deepgo.Version)
+	mcpServer := server.NewMCPServer(
+		"DeepGo MCP",
+		deepgo.Version,
+	)
 	stdioServer := server.NewStdioServer(mcpServer)
 	slog.SetDefault(logger)
 	slog.SetLogLoggerLevel(slog.LevelError)
@@ -54,8 +58,17 @@ func newLogger(ctx context.Context) (*slog.Logger, error) {
 		return nil, fmt.Errorf("failed to get GOPATH: %w", err)
 	}
 
+	if gopath == "" {
+		home, err := os.UserHomeDir()
+		if err != nil {
+			return nil, fmt.Errorf("failed to get home directory: %w", err)
+		}
+
+		gopath = filepath.Join(home, "go")
+	}
+
 	filename := filepath.Join(gopath, "deepgo", "mcpserver.log")
-	if err := os.MkdirAll(filepath.Dir(filename), 0o755); err != nil {
+	if err := os.MkdirAll(filepath.Dir(filename), 0o644); err != nil {
 		return nil, fmt.Errorf("failed to create directory %q: %w", filepath.Dir(filename), err)
 	}
 
@@ -87,6 +100,8 @@ func (s *MCPServer) initTools() {
 		document.NewLatestGoVersionTool(),
 		style.NewModernizeTool(),
 		style.NewGoStyleTool(),
+		style.NewSkeleton(),
+		util.NewCopyTxtarTool(),
 	)
 }
 

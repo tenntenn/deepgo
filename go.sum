@@ -9,6 +9,10 @@ github.com/google/go-querystring v1.1.0 h1:AnCroh3fv4ZBgVIf1Iwtovgjaw/GiKJo8M8yD
 github.com/google/go-querystring v1.1.0/go.mod h1:Kcdr2DB4koayq7X8pmAG4sNG59So17icRSOU623lUBU=
 github.com/google/uuid v1.6.0 h1:NIvaJDMOsjHA8n1jAhLSgzrAzy1Hgr+hNrb57e+94F0=
 github.com/google/uuid v1.6.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
+github.com/gostaticanalysis/skeleton/v2 v2.3.0 h1:ONgL12/0eGl3L//to4Vs4KHw1+ZVryDHrjcE+EW4ZIs=
+github.com/gostaticanalysis/skeleton/v2 v2.3.0/go.mod h1:nP4cR28xikDgqMmN5PIOyj5hfOtNx4vMXlQ/eYoCbSY=
+github.com/gostaticanalysis/skeletonkit v0.4.1 h1:22ImX8zqtjDGfvQZYwJvtVR6ff6JwG4jQLIigZGpNto=
+github.com/gostaticanalysis/skeletonkit v0.4.1/go.mod h1:ep5WlFfwr3pi3erF3rcpyobHmyle9aLLbKCAacBRGc4=
 github.com/josharian/mapfs v0.0.0-20210615234106-095c008854e6 h1:c+ctPFdISggaSNCfU1IueNBAsqetJSvMcpQlT+0OVdY=
 github.com/josharian/mapfs v0.0.0-20210615234106-095c008854e6/go.mod h1:Rv/momJI8DgrWnBZip+SgagpcgORIZQE5SERlxNb8LY=
 github.com/josharian/txtarfs v0.0.0-20240408113805-5dc76b8fe6bf h1:ZWuoyLMwZvLJ6OHUhPq1sZHa37Pikt6DXkZPhhOBzEE=
@@ -19,6 +23,8 @@ github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZb
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/stretchr/testify v1.9.0 h1:HtqpIVDClZ4nwg75+f6Lvsy/wHu+3BoSGCbBAcpTsTg=
 github.com/stretchr/testify v1.9.0/go.mod h1:r2ic/lqez/lEtzL7wO/rwa5dbSLXVDPFyf8C91i36aY=
+github.com/tenntenn/golden v0.2.0 h1:ENbHNS5P2Bcnh2QWQcwtNPDYnIvFGuK4lKVDkCq4AHs=
+github.com/tenntenn/golden v0.2.0/go.mod h1:OB8A7xwUZ9xE19KXoOMPl223hhcH4uD8oeQS9fLTiEE=
 github.com/tenntenn/goversion v0.1.3 h1:Tfs3ZRSnyt/uyTCZpvGLkEwrC4C3wIFTJsbFRwnpVfg=
 github.com/tenntenn/goversion v0.1.3/go.mod h1:UDl6vsXXt6MeLpNsqYpMRwlkU0yORaBQ0ifpONQv53o=
 github.com/yosida95/uritemplate/v3 v3.0.2 h1:Ed3Oyj9yrmi9087+NczuL5BwkIc4wvTb5zIM+UJPGz4=
